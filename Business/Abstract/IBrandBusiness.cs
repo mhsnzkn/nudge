@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Utility;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -7,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IBrandLogic
+    public interface IBrandBusiness
     {
         Task<Brand> GetByIdAsync(int id);
         Task<List<Brand>> GetListAsync(Expression<Func<Brand, bool>> filter = null);
-        void Add(Brand brand);
-        void Delete(Brand brand);
-        void Update(Brand brand);
+        Task<ResultModel> Add(Brand brand);
+        Task<ResultModel> Delete(Brand brand);
+        Task<ResultModel> Update(Brand brand);
     }
 }

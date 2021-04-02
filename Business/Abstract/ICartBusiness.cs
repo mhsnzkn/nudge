@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Utility;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -7,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ICartLogic
+    public interface ICartBusiness
     {
         Task<Cart> GetByIdAsync(int id);
         Task<List<Cart>> GetListAsync(Expression<Func<Cart, bool>> filter = null);
-        void Add(Cart cart);
-        void Delete(Cart cart);
-        void Update(Cart cart);
+        Task<ResultModel> Add(Cart cart);
+        Task<ResultModel> Delete(Cart cart);
+        Task<ResultModel> Update(Cart cart);
     }
 }

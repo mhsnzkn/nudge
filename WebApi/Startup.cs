@@ -34,7 +34,9 @@ namespace WebApi
 
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase(databaseName: "NudgeDb"));
 
-            services.AddScoped<IBrandLogic, BrandLogic>();
+            services.AddScoped<IBrandBusiness, BrandBusiness>();
+            services.AddScoped<ICartBusiness, CartBusiness>();
+            services.AddScoped<IConfigurationBusiness, ConfigurationBusiness>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

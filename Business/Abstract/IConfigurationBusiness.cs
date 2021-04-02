@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Utility;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -7,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IConfigurationLogic
+    public interface IConfigurationBusiness
     {
         Task<Configuration> GetByIdAsync(int id);
         Task<List<Configuration>> GetListAsync(Expression<Func<Configuration, bool>> filter = null);
-        void Add(Configuration configuration);
-        void Delete(Configuration configuration);
-        void Update(Configuration configuration);
+        Task<ResultModel> Add(Configuration configuration);
+        Task<ResultModel> Delete(Configuration configuration);
+        Task<ResultModel> Update(Configuration configuration);
     }
 }

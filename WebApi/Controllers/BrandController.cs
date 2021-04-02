@@ -16,20 +16,29 @@ namespace WebApi.Controllers
     {
 
         private readonly ILogger<BrandController> _logger;
-        private readonly IBrandLogic brandLogic;
+        private readonly IBrandBusiness brandBusiness;
 
         public BrandController(ILogger<BrandController> logger,
-            IBrandLogic brandLogic)
+            IBrandBusiness brandBusiness)
         {
             _logger = logger;
-            this.brandLogic = brandLogic;
+            this.brandBusiness = brandBusiness;
         }
 
         [HttpGet]
         public async Task<IEnumerable<Brand>> Get()
         {
-            var rng = new Random();
-            return await brandLogic.GetListAsync();
+            return await brandBusiness.GetListAsync();
+        }
+
+        // POST api/<BrandController>
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Brand model)
+        {
+            var result = await brandBusiness.Add(model);
+            if (result.Error)
+                return Ok(result);
+            return CreatedAtAction(nameof(Get), new { model.Id });
         }
     }
 }
