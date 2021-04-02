@@ -21,9 +21,7 @@ namespace DataAccess.Base
             get
             {
                 if (_brand == null)
-                {
                     _brand = new BrandRepository(context);
-                }
 
                 return _brand;
             }
@@ -35,9 +33,7 @@ namespace DataAccess.Base
             get
             {
                 if (_configuration == null)
-                {
                     _configuration = new ConfigurationRepository(context);
-                }
 
                 return _configuration;
             }
@@ -49,9 +45,7 @@ namespace DataAccess.Base
             get
             {
                 if (_cart == null)
-                {
                     _cart = new CartRepository(context);
-                }
 
                 return _cart;
             }

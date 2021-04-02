@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccess.Base
 {
@@ -35,6 +36,11 @@ namespace DataAccess.Base
             return filter == null
                 ? context.Set<TEntity>()
                 : context.Set<TEntity>().Where(filter);
+        }
+
+        public async Task<TEntity> GetByIdAsync (int id)
+        {
+            return await context.Set<TEntity>().FindAsync();
         }
 
         public void Update(TEntity entity)

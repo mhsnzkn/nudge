@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{949644A3-BA1E-47A9-A94B-EFD3EE81BFB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{949644A3-BA1E-47A9-A94B-EFD3EE81BFB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C92A10C2-9021-4AF8-8BD1-A68F4FBEAB06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{C92A10C2-9021-4AF8-8BD1-A68F4FBEAB06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D2D075BF-B6A6-4A34-AC30-94613E67F708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D2D075BF-B6A6-4A34-AC30-94613E67F708}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{79F4EA03-B22E-412C-A30F-C4CF13B2FFF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D2D075BF-B6A6-4A34-AC30-94613E67F708}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D075BF-B6A6-4A34-AC30-94613E67F708}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D075BF-B6A6-4A34-AC30-94613E67F708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F4EA03-B22E-412C-A30F-C4CF13B2FFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F4EA03-B22E-412C-A30F-C4CF13B2FFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F4EA03-B22E-412C-A30F-C4CF13B2FFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F4EA03-B22E-412C-A30F-C4CF13B2FFF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
