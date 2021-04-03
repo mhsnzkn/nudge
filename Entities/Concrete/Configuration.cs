@@ -13,6 +13,7 @@ namespace Entities.Concrete
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
+        [Required]
         public ConfigurationType Type { get; set; }
         public decimal Price { get; set; }
     }

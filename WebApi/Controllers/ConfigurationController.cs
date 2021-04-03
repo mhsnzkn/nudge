@@ -41,7 +41,8 @@ namespace WebApi.Controllers
             var result = await configurationBusiness.Add(model);
             if (result.Error)
                 return Ok(result);
-            return CreatedAtAction(nameof(Get), new { model.Id });
+            result.Data = model.Id;
+            return CreatedAtAction(nameof(Get), result);
         }
 
     }

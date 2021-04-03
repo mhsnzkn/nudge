@@ -38,7 +38,8 @@ namespace WebApi.Controllers
             var result = await brandBusiness.Add(model);
             if (result.Error)
                 return Ok(result);
-            return CreatedAtAction(nameof(Get), new { model.Id });
+            result.Data = model;
+            return CreatedAtAction(nameof(Get), result);
         }
     }
 }
