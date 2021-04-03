@@ -30,6 +30,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Cart model)
         {
+            model.UserId = HttpContext.Connection.RemoteIpAddress.ToString();
             var result = await cartBusiness.Add(model);
             if (result.Error)
                 return Ok(result);

@@ -34,6 +34,7 @@ namespace WebApi
 
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase(databaseName: "NudgeDb"));
 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IBrandBusiness, BrandBusiness>();
             services.AddScoped<ICartBusiness, CartBusiness>();
             services.AddScoped<IConfigurationBusiness, ConfigurationBusiness>();
