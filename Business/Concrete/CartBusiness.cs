@@ -53,7 +53,7 @@ namespace Business.Concrete
 
         public async Task<List<Cart>> GetListAsync(Expression<Func<Cart, bool>> filter = null)
         {
-            return await uow.Cart.Get(filter).ToListAsync();
+            return await uow.Cart.Get(filter).Include(a=>a.Brand).Include(a => a.Ram).Include(a => a.Colour).ToListAsync();
         }
 
         public async Task<ResultModel> Update(Cart Cart)
