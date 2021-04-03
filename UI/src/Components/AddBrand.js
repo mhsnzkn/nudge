@@ -18,17 +18,17 @@ function AddBrand(props) {
 
     return (
         <div className="border m-4 p-4">
-        <div class="row g-3">
-            <div class="col-md-4">
-                <label class="visually-hidden">Name</label>
-                <input type="text" class="form-control" placeholder="Name" onChange={e => setValues({...values, "name":e.target.value})} />
+        <div className="row g-3">
+            <div className="col-md-4">
+                <label className="visually-hidden">Name</label>
+                <input type="text" className="form-control" placeholder="Name" onChange={e => setValues({...values, "name":e.target.value})} />
             </div>
-            <div class="col-md-4">
-                <label class="visually-hidden">Price</label>
-                <input type="number" class="form-control" placeholder="Price" onChange={e => setValues({...values, "price":parseFloat(e.target.value)})} />
+            <div className="col-md-4">
+                <label className="visually-hidden">Price</label>
+                <input type="number" className="form-control" placeholder="Price" onChange={e => setValues({...values, "price":parseFloat(e.target.value)})} />
             </div>
-            <div class="col-md-3 offset-md-1">
-                <button type="submit" class="btn btn-primary mb-3" onClick={() => postData()} >Add Brand</button>
+            <div className="col-md-3 offset-md-1">
+                <button type="submit" className="btn btn-primary mb-3" onClick={() => postData()} >Add Brand</button>
             </div>
         </div>
         </div>
